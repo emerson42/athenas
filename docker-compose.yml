@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+    banco:
+        build:
+            context: "./"
+            dockerfile: Dockerfile-banco 
+        container_name: banco 
+        volumes:
+            - ./banco/data:/var/lib/mysql
+        environment: 
+            - MYSQL_ROOT_PASSWORD=phpens
+            - MYSQL_DATABASE=athenas    
+
+    php:
+        build:
+            context: "./"
+            dockerfile: Dockerfile-php    
+        container_name: php
+        volumes:
+            - ./php/www:/var/www/html
+        ports: 
+            - "8888:80"
+        depends_on: 
+            - banco
