@@ -9,9 +9,8 @@ A aplicação desenvolvida é um de crud PHP com MySql.
 
 ## Rodando a Aplicação
 
-execute o comando: docker-compose up
-Abra o brower (De preferência Google Chrome)
-http:\\localhost:8888
+- Execute o comando: docker-compose up
+- Caminho da Aplicação: http:\\localhost:8888
 
 ## Contato: 
 
